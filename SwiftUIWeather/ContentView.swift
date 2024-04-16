@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var weatherViewModel: CityWeatherViewModel
+    // Use '@StateObject' bc this view is the ultimate owner of this model
+    // https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-stateobject-property-wrapper
+    @StateObject var weatherViewModel: CityWeatherViewModel
+    
     @State private var selectedIndex = 0
     @State private var title = "--"
 

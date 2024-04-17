@@ -15,6 +15,7 @@ struct ContentView: View {
                     title: { Text(title) },
                     icon: { }
                 )
+                CustomTitleView(selectedIndex: $selectedIndex)
                 TabView(selection: $selectedIndex) {
                     tokyoTab
                         .tabItem {
